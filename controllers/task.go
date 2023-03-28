@@ -19,6 +19,10 @@ type UpdateTaskInput struct {
 	Task       string `json:"task"`
 	Deadline   string `json:"deadline`
 }
+
+func Home(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{"data": "Welcome to the API"})
+}
 // GET /tasks
 // Get all tasks
 func FindTasks(c *gin.Context) {
